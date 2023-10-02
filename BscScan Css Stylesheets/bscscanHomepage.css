@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+.top-header-section .navbar .navbar-toggler{
+    border: none;
+}
+.top-header-section .navbar .navbar-brand img{
+    width: 165px;
+}
+.top-header-section .navbar .navbar-nav li a.active{
+    color: rgb(72, 199, 250);
+}
+.top-header-section .navbar .navbar-nav li a{
+    font-weight: bold;
+}
+.top-header-section .navbar .navbar-nav li:hover>ul{
+    display: block;
+    position: absolute;
+    right: 6px;
+}
+.top-header-section .navbar .navbar-nav .dropdown-menu li a:hover{
+    background: #fff;
+    transition: all 0.3s;
+}
+.top-header-section .navbar .navbar-nav .dropdown-menu{
+    position: absolute;
+    right: 33px;
+}
+.top-header-section .navbar .navbar-nav{
+    margin-left: auto;
+}
+.top-header-section .navbar .navbar-nav li a:hover{
+    color: #3498db;
+    transition: all 0.3s;
+}
+#resources-dropdown{
+    position: absolute;
+    width: 900px;
+    right: 6px;
+    padding: 63px;
+
+}
+#resources-dropdown li a{
+    color: rgb(73, 73, 73);
+}
+#resources-dropdown li a span{
+    position: relative;
+    font-size: 10px;
+    top: 0px;
+}
+#transaction-c-brdr{
+    display: none;
+}
+.main-top{
+    background-image: url(../bscscanAllimages/abstract-shapes-20\ bg.svg);
+    background-color: #12161c;
+    height: fit-content;
+}
+#validators-drp{
+    margin-right: 290px;
+}
+.top-chart{
+    box-shadow: 2px 2px 5px 0px grey;
+}
+.latest-block{
+    box-shadow: 2px 2px 5px 0px grey;
+}
+.latest-block .block-row span{
+  background: lightgray;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 2px lightgray;
+}
+.latest-block tr td a{
+ text-decoration: none;
+ color: #3498db;
+}
+.latest-block tr td .txns a{
+    font-size: small;
+}
+.latest-block tr td.bnb span{
+    font-size: small;
+}
+.latest-block tr td span.name-letter{
+    position: relative;
+    top: 15px;
+}
+.footer-section{
+    background-image: url(../bscscanAllimages/abstract-shapes-20\ bg.svg);
+    background-color: #12161c;
+}
+.footer-section .powered-by{
+    display: flex;
+}
+.footer-section .add-network-div{
+    display: -ms-inline-grid;
+}
+.footer-section .company-div ul li a{
+    color: #fff;
+    font-weight: lighter;
+}
+.footer-section .community-div ul li a{
+    color: #fff;
+}
+.footer-section .products-div ul li a{
+    color: #fff;
+}
+@media screen and (max-width: 767px) {
+.main-top .main-under .col-lg-5{
+    display: none;
+}
+#resources-dropdown{
+    width: auto;
+}
+#transaction-c{
+    margin-top: 23px;
+}
+.latest-block .col-sm-12{
+    margin-bottom: 15px;
+}
+#transaction-c-brdr{
+    border-top: 1px solid rgb(148, 148, 148);
+    display: block;
+    margin-top: 25px;
+}
+}
+@media screen and (max-width:973px) {
+.latest-block .t-up-div{
+    overflow: scroll;
+} 
+.latest-block .t-up-div .table{
+    width: 200%;
+    height: auto;
+}   
+}
+@media screen and (max-width:820px) {
+#resources-dropdown{
+    width: 670px;
+    position: absolute;
+    margin-left: 150px;
+}
+.latest-block .t-up-div{
+    overflow: scroll;
+    height: auto;
+}
+.latest-block .table{
+    width: 150%;
+}
+}
+@media screen and (max-width:1000px) {
+#resources-dropdown{
+    width: 650px;
+}
+}
+@media screen and (max-width: 600px) {
+.top-header-section #resources-dropdown{
+    width: auto;
+}    
+#resources-dropdown{
+    margin-left: 15px;
+    position: relative;
+    padding: 0px;
+}  
+#validators-drp{
+    margin: 0px;
+}  
+}

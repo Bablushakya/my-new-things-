@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BscScan Charts and Statistics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../BscScan Css Stylesheets/bscscanbep-20byvolume.css">
+   <link rel="icon" href="../bscscanAllimages/favicon.png" type="ico/png">
+</head>
+<body>
+
+<section class="top-header-section" style="width: 100%;">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+<div class="container-fluid">
+<a href="#" class="navbar-brand"><img src="../bscscanAllimages/logo-bscscan.svg" alt=""></a>   
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#clapsenvb">
+<span class="navbar-toggler-icon"></span>
+</button>  
+<div class="collapse navbar-collapse" id="clapsenvb">  
+<ul class="navbar-nav">
+<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Blockchain</a>
+<ul class="dropdown-menu">
+<li><a href="../BscScan Html's/bscscanTransactionspage.html" class="dropdown-item">Transaction</a></li>
+<li><a href="../BscScan Html's/bscScanPendingTransactions.html" class="dropdown-item">Pending Transactions</a></li>
+<li><a href="../BscScan Html's/BscScanContractInternalTransactions.html" class="dropdown-item">Contract internal Transactions</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a href="../BscScan Html's/bscScanViewBlocks.html" class="dropdown-item">View Blocks</a></li>
+<li><a href="../BscScan Html's/bscScanForkedBlocks.html" class="dropdown-item">Forked Blocks (Reorgs)</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a href="../BscScan Html's/bscscantopaccounts.html" class="dropdown-item">Top Accounts</a></li>
+<li><a href="../BscScan Html's/bscscanVerifiedContracts.html" class="dropdown-item">Verified Contracts</a></li>
+<!--blockchain dropdown end-->
+</ul>
+</li>
+<li class="nav-item" id="validator"><a href="#" class="nav-link dropdown-toggle">Validators</a>
+<ul class="dropdown-menu" id="validators-drp">
+<li><a href="../BscScan Html's/bscscanValidatorsLeaderboard.html" class="dropdown-item">Validators Leaderboard</a></li>
+<li><a href="../BscScan Html's/bscscanViewValidatorSetInfo.html" class="dropdown-item">View Validators Set info</a></li>
+<!--validators dropdown end-->
+</ul>
+</li>
+<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Tokens</a>
+<ul class="dropdown-menu">
+<li><a href="../BscScan Html's/bscscanbep-20token-bymarketcap.html" class="dropdown-item">BEP-20 Tokens By MarketCap</a></li>
+<li><a href="../BscScan Html's/bscScanbep-20TokenByVolume.html" class="dropdown-item">BEP-20 Tokens By Volume</a></li>
+<li><a href="../BscScan Html's/bscscanViewbep-20Transfer.html" class="dropdown-item">View BEP-20 Transfers</a></li>
+<li><hr class="dropdown-devider"></li>
+<li><a href="../BscScan Html's/bscscanErc-721TopTokens.html" class="dropdown-item">ERC721 Top Tokens</a></li>
+<li><a href="bscscanViewERC-721Transfer.html" class="dropdown-item">View ERC721 Transfers</a></li>
+<li><hr class="dropdown-devider"></li>
+<li><a href="../BscScan Html's/bscscanERC1155TopTokens.html" class="dropdown-item">ERC-1155 Top Tokens</a></li>
+<li><a href="../BscScan Html's/bscscanViewERC1155Transfer.html" class="dropdown-item">View ERC-1155 Transfers</a></li>
+</ul>
+<!--tokens li end-->
+</li>
+<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Resources</a>
+<ul class="dropdown-menu" id="resources-dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+<h5 class="dropdown-header"><b>Developers</b></h5>    
+<li><a href="../BscScan Html's/bscscanDocumentationApis.html" class="dropdown-item">API Documentation</a></li>
+<li><a href="../BscScan Html's/bscscanVerifyAccount.html" class="dropdown-item">Verify Contract</a></li>
+<li><a href="#" class="dropdown-item">Byte to Opcode</a></li>
+<li><a href="#" class="dropdown-item">Vyper Online Compiler</a></li>
+<li><a href="#" class="dropdown-item">Contract Diff Checker</a></li>
+<!--col one div end-->
+</div>    
+        
+<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+<h5 class="dropdown-header"><b>Explore</b></h5>
+<li><a href="#" class="dropdown-item">Gas Tracker <span class="badge bg-success">New</span></a></li>
+<li><a href="#" class="dropdown-item">Node Tracker <span class="badge bg-success">New</span></a></li>
+<li><a href="#" class="dropdown-item">Dex Tracker <span class="badge bg-success">New</span></a></li>
+<li><a href="#" class="dropdown-item">Domain Name Lookup <span class="badge bg-success">New</span></a></li>
+<!--col one div end-->
+</div>  
+        
+<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+<h5 class="dropdown-header"><b>Tools</b></h5>
+<li><a href="#" class="dropdown-item">Label Word Cloud</a></li>
+<li><a href="#" class="dropdown-item">Verified Signature</a></li>
+<li><a href="#" class="dropdown-item">Token Approvals <span class="badge bg-secondary">Beta</span></a></li>
+<li><a href="#" class="dropdown-item">Unit Converter</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a href="../BscScan Html's/bscscanchartsandstats.html" class="dropdown-item">Chart & Stats</a></li>
+<li><a href="../BscScan Html's/bscscanTopStatistics.html" class="dropdown-item">Top Statistics</a></li>
+<li><a href="../BscScan Html's/bscscanDeveloperApis.html" class="dropdown-item">Developer Api</a></li>
+<!--col one div end-->
+</div>  
+        
+<!--row div end mega menu-->
+</div>
+<!--container div end-->
+</div>
+<!--more main ul end-->
+</ul>
+<!--More li end-->
+</li>
+        
+<li class="nav-item"><a href="#" class="nav-link"><span class="user-logo"><i class="fa fa-circle-user"></i></span> Sign in</a></li>
+<li class="nav-item dropdown"><a href="#" class="nav-link"><img src="../bscscanAllimages/bnb.svg" alt="" style="width: 25px;"></a>
+<ul class="dropdown-menu">
+<li><a href="#" class="dropdown-item">Bsc Mainnet</a></li>
+<li><a href="#" class="dropdown-item">Bsc Testnet</a></li>
+<!--ul dropdown end-->
+</ul>
+<!--explorer li end-->
+</li>   
+ <!--main ul end-->
+</ul>   
+</div>
+<!--collapse div end-->
+
+<!--container fluid div end in navbar-->
+</div>
+<!--navbar end-->
+</nav>
+<!--top form input div-->
+<!--header section end-->
+</section>
+
+
+
+<section class="top-input-section" style="width: 100%; height: 65px;">
+<div class="container-fluid mt-2">
+<div class="row">
+
+<div class="col-lg-4 col-md-4 col-sm-12 col-12" style="display: none;">
+<div class="bnb-price">
+<span class="text-dark" style="font-size: small;">BNB: $319.07
+<span class="text-danger" style="font-size: small;">(-1.29%)</span>
+</span>
+<span class="space ms-2 me-2">|
+<a href="#" class="text-decoration-none text-dark" style="font-size: small;"><i class="fa fa-gas-pump"></i>
+<span class="price">3 Gwei</span>
+</a>
+</span>
+    <!--bnb price div end-->
+</div>
+    <!--left side col div end-->
+</div>
+    
+    
+<div class="col-lg-8 col-md-8 col-sm-12 col-12" style="width: 100%;">
+<div class="input-group">
+<span class="input-group-text">
+<select name="" id="" class="form-select">
+<option value="all-filters">All Filters</option>
+<option value="address">Address</option>
+<option value="tokens">Tokens</option>
+<option value="name-tags">Name Tags</option>
+<option value="labels">Labels</option>
+<option value="websites">Websites</option>
+</select>
+</span>
+<input type="text" class="form-control" placeholder="Search By Address/ Txn Hash/">
+<div class="input-group-text" style="background: #3498db;">
+<span class="input-group-text" style="background-color: #3498db;"><i class="fa fa-search  text-white style="display: block; width: 100%;"></i></span>
+    <!--input group text div end-->
+</div>
+</div>
+<!--input group div end-->
+</div>
+        
+<!--row div end-->
+</div>
+</div>
+</section>
+<!--top input section end-->
+
+
+<section class="token-tracker m-3 bg-light">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 col-12">
+<div class="validator p-2 m-auto"><h5>BNB Smart Chain Charts & Statistics</h5></div>
+
+    <!--col lg-6 left side div end-->
+</div>
+
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
+<h5></h5>
+    <!--right side div end validaotrs top leaderboards-->
+</div>
+    <!--col lg 6 right side div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--blocks body section end-->
+</section>
+
+
+
+<section class="cards m-3">
+<div class="card">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Daily Transactions Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/transactionhistory.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg-3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 t-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">BEP-20 Daily Token Transfer Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/tokenerc-20txns.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg-3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Unique Addresses Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/address.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg-3 div end-->
+</div>
+
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Average Block Size Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/blocksize.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Average Block Time Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/blocktime.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Average Gas Price Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/gasprice.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Average Gas Limit Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/gaslimit.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Daily Gas Used Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/gasused.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Block Count and Rewards Chart</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/blockcount.svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Daily Active BNB Smart Chain Address</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/tokenerc-20txns (1).svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-3 col-md-6 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header" style="background-color: #f8f9fa; border: none;">
+<a href="#" class="text-decoration-none">Daily Active BEP-20 Address</a>
+    <!--card header end-->
+</div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/tokenerc-20txns (2).svg" alt="" width="100%" height="auto">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--card div end-->
+</div>
+
+    <!--row div end-->
+</div>
+    <!--cards section end-->
+</section>
+
+
+<section class="card-section-two m-3">
+<div class="card">
+<div class="card-header"><h6>Network Data</h6></div>
+<div class="card-body">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-12 col-12">
+<div class="card">
+<div class="card-header bg-light" style="border: none;"><a href="#" class="text-decoration-none"><h6>Network Pending Transactions Chart</h6></a></div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/pending.svg" alt="" style="width: 100%; height: auto;">
+
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+
+<div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header bg-light" style="border: none;"><a href="#" class="text-decoration-none"><h6>Network Transaction Fee Chart</h6></a></div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/transactionfee.svg" alt="" style="width: 100%; height: auto;">
+
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+
+<div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header bg-light" style="border: none;"><a href="#"class="text-decoration-none">Network Utilization Chart</a></div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/networkutilization.svg" alt="" style="width: 100%; height: auto;">
+
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--main card body div end-->
+</div>
+
+
+    <!--main content card div end-->
+</div>
+<!--card section two end-->
+</section>
+
+
+<section class="validaotrs-data m-3">
+<div class="card">
+<div class="card-header"><h6>Validators Data</h6></div>
+<div class="card-body">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-12 col-12">
+<div class="card">
+<div class="card-header bg-light" style="border: none;"><a href="#" class="text-decoration-none">Voting Power 7days (minute intervals)</a></div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/pending.svg" alt="" style="width: 100%; height: auto;">
+    <!--card body end-->
+</a>
+    <!--card div end-->
+</div>
+    <!--col div end-->
+</div>
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header bg-light" style="border: none;"><a href="#" class="text-decoration-none">Avg Voting Power</a></div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/tokenerc-20txns (2).svg" alt="" style="width: 100%; height: auto;">
+
+    <!--card header end-->
+</a>
+    <!---card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+
+
+
+
+<div class="col-lg-3 col-md-3 col-sm-12 col-12 mt-2 mb-2">
+<div class="card">
+<div class="card-header bg-light" style="border: none;"><a href="#" class="text-decoration-none">Top 25 Validators by Blocks</a></div>
+<a href="#" class="card-body">
+<img src="../bscscanAllimages/validators.svg" alt="" style="width: 100%; height: auto;">
+    <!--card body end-->
+</a>
+
+    <!--card div end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--card body div end-->
+</div>
+
+    <!--main card div end-->
+</div>
+    <!--validators data section end-->
+</section>
+
+
+
+
+<section class="card m-3">
+<div class="card">
+<div class="card-header"><h6>Domain Name Data</h6></div>
+<div class="card-body">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+<div class="card">
+<div class="card-header" style="border: none;"><a href="#" class="text-decoration-none">Space ID (.bnb) Registration Chart</a></div>
+<div class="card-body">
+<img src="../bscscanAllimages/spaceid.svg" alt="" style="width: 100%; height: auto;">
+    <!--card body div end-->
+</div>
+    <!--card div end-->
+</div>
+
+    <!--col lg 3 div end-->
+</div>
+
+    <!--row end-->
+</div>
+
+    <!--card body div end-->
+</div>
+
+    <!--card div end-->
+</div>
+
+<!--card section end-->
+</section>
+
+<section class="card m-3">
+<div class="card">
+<div class="card-header"><h6>Verified Contracts Chart</h6></div>
+<div class="card-body">
+<div class="row">
+<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+<div class="card">
+<div class="card-header" style="border: none;"><a href="#" class="text-decoration-none">Verified Contracts Chart</a></div>
+<div class="card-body">
+<img src="../bscscanAllimages/verified-contracts.svg" alt="" style="width: 100%; height: auto;">
+    <!--card body div end-->
+</div>
+    <!--card div end-->
+</div>
+
+    <!--col lg 3 div end-->
+</div>
+
+    <!--row end-->
+</div>
+
+    <!--card body div end-->
+</div>
+
+    <!--card div end-->
+</div>
+
+<!--card section end-->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="footer-section mt-3" style="box-shadow: 2px 2px 2px lightgray;">
+<div class="cont ms-4" style="border: 1px sold green;">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="powered-by mt-3">
+<img src="../bscscanAllimages/bnb.svg" alt="" width="25px">
+<span class="text h5 text-white ms-3 mt-2" style="font-size: small;">Powered by BNB Beacon Chain</span>
+
+    <!--powered by div end-->
+</div>
+<p class="text-white mt-3" style="font-weight: lighter; font-size: small;">BscScan is a Block Explorer andAnalytics Platform for BNB Smart Chain</p>
+
+<div class="add-network-div mt-4 mb-3">
+<button type="button" class="btn btn-boxed text-white btn-sm mt-3" style="background: rgba(248,249,250,.1);"><span class="img"><img src="../bscscanAllimages/metamask.svg" alt="" style="width: 25px;"></span> Add BBC Network</button>
+    
+<a href="#" class="btn ms-3 text-white mt-3" style="background: rgba(248,249,250,.1);"><i class="fa fa-cogs text-white"></i>Preferences
+</a>
+    
+<button id="dark-mode" class="btn btn-boxed mt-3" style="cursor: pointer;"><i class="fa fa-moon text-white" style="background: transparent;"></i></button>
+    
+    
+<!--add network div end-->
+</div>
+
+
+
+
+
+    <!--col first div end-->
+</div>
+
+
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="company-div mt-4">
+<h5 class="company text-white" style="font-size: small; font-weight: bold;">Company
+<hr>
+</h5>
+<ul class="navbar-nav">
+<li class="nav-item"><a href="#" class="nav-link">Advertise
+<sup><span class="badge bg-success">New</span></sup>
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Delegate to BscScan
+<sup><span class="badge bg-primary">Staking</span></sup>
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Contact Us
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Brand Assets
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Terms of Service
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Bug Bounty
+</a>
+</li>
+<!--main ul end-->
+</ul>
+
+
+<!--company div end-->
+</div>
+    <!--col two div end-->
+</div>
+
+
+
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="community-div mt-4">
+<h5 class="community text-white" style="font-size: small; font-weight: bold;">Community
+<hr>
+</h5>
+<ul class="navbar-nav">
+<li class="nav-item"><a href="../BscScan Html's/bscscanDocumentationApis.html" class="nav-link">API Documentation
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Knowledge Base
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Network Status
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Learn BSC
+</a>
+</li>
+ <!--main ul end-->
+</ul>
+
+    <!--community div end-->
+</div>
+    <!--col three div end-->
+</div>
+
+
+
+
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="products-div mt-4">
+<h5 class="community text-white" style="font-size: small; font-weight: bold;">Products
+<hr>
+</h5>
+<ul class="navbar-nav">
+<li class="nav-item"><a href="../BscScan Html's/bscscanDeveloperApis.html" class="nav-link">Developer APIs
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Explorer-as-a-Service (EaaS)
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Etherscan
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Blockscan
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Polygonscan
+</a>
+</li>
+<!--main ul end-->
+</ul>
+
+    <!--products div end-->
+</div>    
+
+    <!--col four div end-->
+</div>
+
+    <!--row div end-->
+</div>
+
+<hr style="opacity: 0.2; color: #fff;" class="m-3">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12 col-12">
+<p class="text-white" style="font-weight: lighter; font-size: small;">BscScan © 2023 (BSC-C) <spanclass="ms-2">| </span> 
+? Built by the same team behind 
+<a href="#" class="text-decoration-none">Etherscan</a>
+<span>|</span>
+<a href="#" class="text-decoration-none text-secondary">Donate</a>
+<i class="fa fa-heart text-danger"></i>
+</p>
+
+    <!--col first div end left side-->
+</div>
+
+
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 text-end">
+<ul class="navbar-nav" style="display: -webkit-inline-box;">
+<li class="nav-item mr-3"><a href="#" class="nav-link btn">
+<i class="fa fa-message text-white"></i>
+</a>
+</li>
+<li class="nav-item ms-3 me-3"><a href="#" class="nav-link btn ">
+<i class="fa-brands fa-square-twitter text-white"></i>
+</a>
+</li>
+<li class="nav-item me-3"><a href="#" class="nav-link bt">
+    <i class="fa-solid fa-circle fa-m text-white"></i>
+</a>
+</li>
+
+    <!--ul end last right side-->
+</ul>
+    <!--col lg 4 right side end-->
+</div>
+
+
+    <!--row div end-->
+</div>
+
+
+
+<!--container div end-->    
+</div>
+
+    <!--footer section end-->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

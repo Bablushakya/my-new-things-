@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Apis | BscScan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../BscScan Css Stylesheets/bscscandocumentationapis.css">
+   <link rel="icon" href="../bscscanAllimages/favicon.png" type="ico/png">
+</head>
+<body>
+
+    
+
+
+<div class="offcanvas offcanvas-start" id="mycnvs">
+<div class="offcanvas-header">
+<button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#mycnvs"></button>    
+</div>
+<!--offcanvas header end-->
+<div class="offcanvas-body">
+<div class="left-menu m-2 me-5">
+<nav class="navbar">
+<ul class="navbar-nav">
+<div class="introduction-div mb-4"> 
+<li class="nav-item mb-1"><b>introduction</b></li>
+<li class="nav-item mb-2"><a href="#" class="nav-link active text-secondary"><i class="fa fa-ranking-star text-warning me-2"></i>Getting Started</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Creating an Account</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Generating an Api Key</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Endpoint URLs</a></li>
+</div>
+<!--introduction div end-->
+<div class="api-endpoints mb-4"> 
+<li class="nav-item mb-1" ><a href="#" class="nav-link active disabled"><img src="../bscscanAllimages/images.jpeg" alt="" style="width: 34px;"> <b>API ENDPOINTS</b></a></li>
+<li class="nav-item"><a href="#" class="nav-link">Accounts</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Contracts</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Blocks</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Logs</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Geth Proxy</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Tokens</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Gas Tracker</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Stats</a></li>
+</div>
+<!--api endpoints div end-->
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active disabled"><img src="../bscscanAllimages/trophy.jpg"alt="" style="width: 34px;"> <b>API PRO</b></a></li>
+<li class="nav-item"><a href="#" class="nav-link">BscScan API PRO</a></li>
+<li class="nav-item"><a href="#" class="nav-link">API PRO Endpoints</a></li>
+</div>
+<!--api pro div end-->
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active disabled"><img src="../bscscanAllimages/Open-Book-Step-10.webp"alt="" style="width: 34px;"><b>Tutorials</b></a></li>
+<li class="nav-item"><a href="#" class="nav-link">Integrating Google Sheets</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Verifying Contracts Programmatically</a></li>
+</div>
+<!--tutorials div end-->     
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active disabled"><img src="../bscscanAllimages/repair-icon-vector-tools-symbol-600w-1724831503.webp"alt="" style="width: 34px;"><b>MISC TOOLS &  UTILITIES</b></a></li>
+<li class="nav-item"><a href="#" class="nav-link">Libraries</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Plugins</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Public RPC Nodes</a></li>
+</div>
+<!--support div end-->    
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active disabled"><i class="fa fa-hands me-2 text-warning"></i><b>SUPPORT</b><a></li>
+<li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Rate Limits</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Common Error Message</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Getting Help</a></li>
+<li class="nav-item"><a href="#" class="nav-link">VISIT BscScan.CoM <i class="fa fa-arrow-up fa-right"></i></a></li>
+</div>
+<!--support-->
+    <!--ul end left side menu-->
+</ul>
+    <!--navbar end left side menu-->
+</nav>
+    <!--left menu div end-->
+</div>
+    <!--left side menu end div-->
+</div>
+
+<!--offcanvas-body end-->
+</div>
+
+
+
+    <!--offcanvas div end-->
+</div>
+
+
+
+
+
+
+
+<section class="header-section" style="overflow-x: hidden;">
+<header class="header">
+<div class="container-fluid">
+<nav class="navbar navbar-light bg-light navbar-expand-md">
+
+<button type="button" class="btn m-2" id="sidebtn" data-bs-toggle="offcanvas" data-bs-target="#mycnvs">
+<b><i class="fa fa-bars text-warning"></i></b>    
+</button>
+<!--offcanvas toggler btn end-->
+<a href="#" class="navbar-brand"><img src="../bscscanAllimages/logo-bscscan.svg" alt="" style="width: 151px;"></a>
+<select name="sell" id="" style="border: none;">
+<option value="bscscan">BscScan</option>   
+<option value="testnet">Testnet BscScan</option> 
+</select>
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mycollapse">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="mycollapse">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Twitter</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Knowledge Base</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Api Pro</a></li>
+<!--main top navbar ul end-->
+</ul>
+
+<div class="form">
+<button class="form-control" type="button" data-bs-toggle="modal" data-bs-target="#search-top-right">
+<i class="fa fa-search"></i>    
+<span class="search-text">Search</span>
+<!--search div end-->    
+</button>    
+    <!--form div end-->
+</div>
+    <!--collapse div end-->
+</div>
+
+    <!--top navbar end-->
+</nav>
+    <!--container fluid div end in header under-->
+</div>
+
+    <!--top header end-->
+</header>
+    <!--header section end-->
+</section>
+
+
+
+<section class="main-body" style="overflow-x: hidden;">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-3 col-3" id="sidebar">
+<div class="left-menu m-2 me-5">
+<nav class="navbar">
+<ul class="navbar-nav">
+<div class="introduction-div mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active">introduction</a></li>
+<li class="nav-item mb-2"><a href="#" class="nav-link active text-secondary"><i class="fa fa-ranking-star text-warning me-2"></i>Getting Started</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Creating an Account</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Generating an Api Key</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Endpoint URLs</a></li>
+</div>
+<!--introduction div end-->
+<div class="api-endpoints mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active"><img src="../bscscanAllimages/images.jpeg" alt="" style="width: 34px;"> API ENDPOINTS</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Accounts</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Contracts</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Blocks</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Logs</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Geth Proxy</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Tokens</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Gas Tracker</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Stats</a></li>
+</div>
+<!--api endpoints div end-->
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active"><img src="../bscscanAllimages/trophy.jpg"alt="" style="width: 34px;"> API PRO</a></li>
+<li class="nav-item"><a href="#" class="nav-link">BscScan API PRO</a></li>
+<li class="nav-item"><a href="#" class="nav-link">API PRO Endpoints</a></li>
+</div>
+<!--api pro div end-->
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active"><img src="../bscscanAllimages/Open-Book-Step-10.webp"alt="" style="width: 34px;">Tutorials</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Integrating Google Sheets</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Verifying Contracts Programmatically</a></li>
+</div>
+<!--tutorials div end-->    
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active"><img src="../bscscanAllimagesOpen-Book-Step-10.webp"alt="" style="width: 34px;">MISC TOOLS &  UTILITIES</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Libraries</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Plugins</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Public RPC Nodes</a></li>
+</div>
+<!--misc div end-->    
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active"><img src="../bscscanAllimages/repair-icon-vector-tools-symbol-600w-1724831503.webp"alt="" style="width: 34px;">MISC TOOLS &  UTILITIES</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Libraries</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Plugins</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Public RPC Nodes</a></li>
+</div>
+<!--support div end-->    
+<div class="api-pro mb-4"> 
+<li class="nav-item mb-1"><a href="#" class="nav-link active"><i class="fa fa-hands me-2"></i>SUPPORT<a></li>
+<li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Rate Limits</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Common Error Message</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Getting Help</a></li>
+<li class="nav-item"><a href="#" class="nav-link">VISIT BscScan.CoM <i class="fa fa-arrow-up fa-right"></i></a></li>
+</div>
+<!--support-->
+    <!--ul end left side menu-->
+</ul>
+    <!--navbar end left side menu-->
+</nav>
+    <!--left menu div end-->
+</div>
+    <!--left side menu end div-->
+</div>
+
+
+
+
+<div class="col-lg-9 col-md-9 col-sm-12 col-12">
+<div class="introduction m-3">
+<h1><b>Introduction</b></h1>
+<p class="lead text-secondary">Welcome to the BscScan APIs documentation 🚀.</p>
+    <!--introduction div end-->
+</div>
+<div class="bscscan-p">
+<p class="m-3">
+BscScan <a href="#" class="text-decoration-none"><img src="../bscscanAllimages/assets_-MhnuKDbN7YmreAdjefb_-MiHfh2b9kyCKmy729O-_-MiHgqoPDVcb95zaANou_bscscan-logo-circle.webp" alt="" style="width: 24px;"></a> is the leading blockchain explorer, search, API and analytics platform for BNB Smart Chain <a href="#"><img src="../bscscanAllimages/bsc-icon.jpg" alt="" style="width: 24px;"></a> .    
+</p>
+    <!--bscscan p div end-->
+</div>
+
+<div class="bscscan-developer-para m-3">
+<p>
+As a means to provide equitable access to blockchain data, we've developed the <b>BscScan Developer APIs</b> to empower developers with direct access to BscScan's block explorer data and services via <b>GET/POST requests.</b>.    
+</p>
+    <!--developer para div end-->
+</div>
+
+<div class="bscscan-community-para m-3">
+<p>
+BscScan's APIs are provided as a <b>community service</b> and <b>without warranty,</b> so please use what you need and no more.
+</p>
+    <!--community para div end-->
+</div>
+
+<div class="source-attribution m-3">
+<div class="card" style="background: rgb(204, 255, 204); border-left: 5px solid green;">
+<div class="card-body m-2">
+<p>
+<i class="fa fa-check-circle text-success"></i> Source attribution via a backlink or a mention that your app is "Powered by BscScan APIs" is required except for personal/private usage.    
+</p>
+    <!--card body div end-->
+</div>
+    <!--card -div end-->
+</div>
+    <!--source attribution div end-->
+</div>
+
+<div class="api-appoitments m-3 mt-5 mb-4">
+<h2 class="mb-4"><b>Api Endpoint</b></h2>
+<div class="card bg-light" style="background: rgb(204, 255, 204); border-left: 5px solid gainsboro;">
+<div class="card-body">
+<p>
+Your app may need to show a user's BNB balance <a href="#"><img src="../bscscanAllimages/binance_32.webp" alt="" style="width: 24px;"></a> , check the transaction history of an address  or get the latest information about a new token and its price <i class="fa fa-coins text-warning"></i>.    
+</p>
+    <!--card body div end-->
+</div>
+    <!--card div end-->
+</div>
+    <!--api endpoints div end-->
+</div>
+
+<div class="for-para mt-3 m-3">
+<p>
+For that you may find a suitable endpoint from our wide range of APIs that you can simply query to provide data while you remain fully focused on building your applications.    
+</p>
+    <!--for para div end-->
+</div>
+
+<div class="offers">
+<p class="m-3">
+BscScan offers 2 types of API plans, a set of free <b>community endpoints</b> and <b style="color:  rgba(240,185,11,1.00);;">API PRO</b> which consists of additional derived blockchain data.    
+</p>
+    <!--offers div end-->
+</div>
+
+<div class="tutorials m-3">
+<h4><b>Tutorials</b>
+</h4>
+    <!--tutorials div end-->
+</div>
+<div class="card bg-light m-3">
+<div class="card-body" style="border-left: 5px solid gainsboro;";">
+There is an overwhelming amount of data  that can be extracted from the BNB Smart Chain.
+    <!--card body div end-->
+</div>
+    <!--card div end-->
+</div>
+
+<div class="card bg-light m-3">
+<p class="m-2">
+We've helped you take the first steps by writing some thorough tutorials on how to query and derive popular blockchain metrics.    
+</p>
+<p class="mt-3 m-2">
+For power users, we've also added guides such as how you can programmatically verify contracts through API calls and more advanced use cases of endpoints.    
+</p>
+    <!--card div end-->
+</div>
+
+<div class="support m-3">
+<h3 class="support"><b>Support &  FAQ</b></h3>
+<p class="m-2">
+Our curated list of <b>support articles</b> and <b>common questions</b> you may have on topics such as rate limits  , common error messages and API key usage across different networks <i class="fa fa-earth text-info"></i> .
+</p>
+<p class="m-2">
+If your issue is a unique one or you need more clarification, feel free to reach out to us via our support channels.    
+</p>
+    <!--support div end-->
+</div>
+
+<div class="card m-3 mt-5">
+<div class="card-body" id="mycard">
+<div class="next m-2 text-secondary">NEXT- Getting Started</div>
+<div class="creating-account m-2 d-flex justify-content-between"><a href="#" class="text-decoration-none"><b>Creating an Account</b></a> <i class="fa fa-arrow-right"></i></div>
+    <!--card body div end-->
+</div>
+    <!--card div end-->
+</div>
+
+<div class="helpful">
+<div class="card helpful m-3 mt-5">
+<div class="card-body d-flex justify-content-between">
+<div class="last text-secondary">Last modified 1yr ago</div>
+<div class="helpful text-secondary"><b>WAS THIS PAGE HELPFUL</b>
+<a href="#" class="text-secondary"><img src="../bscscanAllimages/Sad-Face-Emoji.png" alt="" style="width: 23px;" class="text-secondary ms-2"></a>
+<a href="#" class="text-secondary me-2"><img src="../bscscanAllimages/Disappointed_Face_Emoji_large.webp" alt="" style="width: 23px;"></a>
+<a href="#"><img src="../bscscanAllimages/bright-smiley-face-emoji-expression-free-vector.webp" alt="" style="width: 23px;"></a>
+</div>
+    <!--card body div end-->
+</div>
+
+    <!--helpful card div end-->
+</div>
+<!--helpful div end-->
+</div>
+
+    <!--col lg 9 div end right side content-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--rwo div end-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--main body section end-->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--top search pop up modal-->
+<div class="modal" id="search-top-right">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header pt-5 pb-5">
+<div class="input-group">    
+    <span class="input-group-text text-secondary" style="background: none; border: none;"><i class="fa fa-search"></i></span>
+<input type="search" class="form-control" placeholder="Search" style="border: none; border-bottom: 1px solid grey;">
+<!--input group div end-->
+</div>
+    <!--modal header div end-->
+</div>
+<div class="modal-body">
+<p class="lead text-center">Type something to search</p>
+    <!--modal body div end-->
+</div>
+    <!--modal content div end-->
+</div>
+    <!--modal dialog div end-->
+</div>
+    <!--modal div end-->
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

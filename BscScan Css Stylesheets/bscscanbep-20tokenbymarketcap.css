@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    overflow-x: hidden;
+}
+
+.top-header-section .navbar .navbar-toggler{
+    border: none;
+}
+.top-header-section .navbar .navbar-brand img{
+    width: 165px;
+}
+.top-header-section .navbar .navbar-nav li a.active{
+    color: rgb(72, 199, 250);
+}
+.top-header-section .navbar .navbar-nav li a{
+    font-weight: bold;
+}
+.top-header-section .navbar .navbar-nav li:hover>ul{
+    display: block;
+    position: absolute;
+    right: 6px;
+}
+.top-header-section .navbar .navbar-nav .dropdown-menu li a:hover{
+    background: #fff;
+    transition: all 0.3s;
+}
+.top-header-section .navbar .navbar-nav .dropdown-menu{
+    position: absolute;
+    right: 33px;
+}
+.top-header-section .navbar .navbar-nav{
+    margin-left: auto;
+}
+.top-header-section .navbar .navbar-nav li a:hover{
+    color: #3498db;
+    transition: all 0.3s;
+}
+.top-header-section .navbar .navbar-nav #validator .dropdown-menu{
+    right: 240px;
+    position: absolute;
+}
+#resources-dropdown{
+    position: absolute;
+    width: 900px;
+    right: 6px;
+    padding: 63px;
+
+}
+#resources-dropdown li a{
+    color: rgb(73, 73, 73);
+}
+#resources-dropdown li a span{
+    position: relative;
+    font-size: 10px;
+    top: 0px;
+}
+.table-section .table thead tr th.age{
+    color: #3498db;
+}
+.table-section .table tbody tr td a{
+    color: #3498db;
+    text-decoration: none;
+}
+.table-section .table tbody tr td span.small{
+font-size: smaller;    
+}
+.footer-section{
+    background-image: url(../bscscanAllimages/abstract-shapes-20\ bg.svg);
+    background-color: #12161c;
+    overflow-x: hidden;
+}
+.footer-section .powered-by{
+    display: flex;
+}
+.footer-section .add-network-div{
+    display: -ms-inline-grid;
+}
+.footer-section .company-div ul li a{
+    color: #fff;
+    font-weight: lighter;
+}
+.footer-section .community-div ul li a{
+    color: #fff;
+}
+.footer-section .products-div ul li a{
+    color: #fff;
+}
+@media screen and (max-width: 767px) {
+#resources-dropdown{
+width: auto;
+}
+#transaction-c{
+margin-top: 23px;
+}
+
+}
+@media screen and (max-width:820px) {
+#resources-dropdown{
+ width: 670px;
+position: absolute;
+margin-left: 150px;
+}    
+}
+@media screen and (max-width:1000px) {
+#resources-dropdown{
+width: 650px;
+}    
+.table-section .table-responsive .table{
+    width: max-content;
+}
+}
+@media screen and (max-width: 600px) {
+.top-header-section #resources-dropdown{
+width: auto;
+}    
+#resources-dropdown{
+margin-left: 15px;
+position: relative;
+padding: 0px;
+}   
+}
+@media screen and (max-width:392px) {
+.top-header-section .navbar .navbar-nav #validator .dropdown-menu{
+right: 0px;
+}
+.top-header-section #resources-dropdown {
+width: auto;
+}
+}
+@media screen and (max-width: 681px) {
+html{
+    overflow-x: hidden;
+}    
+.pagination-section #pagination-ul{
+    margin-top: 20px;
+}
+}

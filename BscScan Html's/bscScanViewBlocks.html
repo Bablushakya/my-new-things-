@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BscScan View Blocks</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../BscScan Css Stylesheets/bscscanviewblocks.css">
+   <link rel="icon" href="../bscscanAllimages/favicon.png" type="ico/png">
+</head>
+<body>
+
+<section class="top-header-section" style="width: 100%;">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+<div class="container-fluid">
+<a href="#" class="navbar-brand"><img src="../bscscanAllimages/logo-bscscan.svg" alt=""></a>   
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#clapsenvb">
+<span class="navbar-toggler-icon"></span>
+</button>  
+<div class="collapse navbar-collapse" id="clapsenvb">  
+<ul class="navbar-nav">
+<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Blockchain</a>
+<ul class="dropdown-menu">
+<li><a href="../BscScan Html's/bscscanTransactionspage.html" class="dropdown-item">Transaction</a></li>
+<li><a href="../BscScan Html's/bscScanPendingTransactions.html" class="dropdown-item">Pending Transactions</a></li>
+<li><a href="../BscScan Html's/BscScanContractInternalTransactions.html" class="dropdown-item">Contract internal Transactions</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a href="../BscScan Html's/bscScanViewBlocks.html" class="dropdown-item">View Blocks</a></li>
+<li><a href="../BscScan Html's/bscScanForkedBlocks.html" class="dropdown-item">Forked Blocks (Reorgs)</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a href="../BscScan Html's/bscscantopaccounts.html" class="dropdown-item">Top Accounts</a></li>
+<li><a href="../BscScan Html's/bscscanVerifiedContracts.html" class="dropdown-item">Verified Contracts</a></li>
+<!--blockchain dropdown end-->
+</ul>
+</li>
+<li class="nav-item" id="validator"><a href="#" class="nav-link dropdown-toggle">Validators</a>
+<ul class="dropdown-menu" id="validators-drp">
+<li><a href="../BscScan Html's/bscscanValidatorsLeaderboard.html" class="dropdown-item">Validators Leaderboard</a></li>
+<li><a href="../BscScan Html's/bscscanViewValidatorSetInfo.html" class="dropdown-item">View Validators Set info</a></li>
+<!--validators dropdown end-->
+</ul>
+</li>
+<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Tokens</a>
+<ul class="dropdown-menu">
+<li><a href="../BscScan Html's/bscscanbep-20token-bymarketcap.html" class="dropdown-item">BEP-20 Tokens By MarketCap</a></li>
+<li><a href="../BscScan Html's/bscScanbep-20TokenByVolume.html" class="dropdown-item">BEP-20 Tokens By Volume</a></li>
+<li><a href="../BscScan Html's/bscscanViewbep-20Transfer.html" class="dropdown-item">View BEP-20 Transfers</a></li>
+<li><hr class="dropdown-devider"></li>
+<li><a href="../BscScan Html's/bscscanErc-721TopTokens.html" class="dropdown-item">ERC721 Top Tokens</a></li>
+<li><a href="../BscScan Html's/bscscanViewERC-721Transfer.html" class="dropdown-item">View ERC721 Transfers</a></li>
+<li><hr class="dropdown-devider"></li>
+<li><a href="../BscScan Html's/bscscanERC1155TopTokens.html" class="dropdown-item">ERC-1155 Top Tokens</a></li>
+<li><a href="../BscScan Html's/bscscanViewERC1155Transfer.html" class="dropdown-item">View ERC-1155 Transfers</a></li>
+</ul>
+<!--tokens li end-->
+</li>
+<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle">Resources</a>
+<ul class="dropdown-menu" id="resources-dropdown">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+<h5 class="dropdown-header"><b>Developers</b></h5>    
+<li><a href="../BscScan Html's/bscscanDocumentationApis.html" class="dropdown-item">API Documentation</a></li>
+<li><a href="../BscScan Html's/bscscanVerifyAccount.html" class="dropdown-item">Verify Contract</a></li>
+<li><a href="#" class="dropdown-item">Byte to Opcode</a></li>
+<li><a href="#" class="dropdown-item">Vyper Online Compiler</a></li>
+<li><a href="#" class="dropdown-item">Contract Diff Checker</a></li>
+<!--col one div end-->
+</div>    
+        
+<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+<h5 class="dropdown-header"><b>Explore</b></h5>
+<li><a href="#" class="dropdown-item">Gas Tracker <span class="badge bg-success">New</span></a></li>
+<li><a href="#" class="dropdown-item">Node Tracker <span class="badge bg-success">New</span></a></li>
+<li><a href="#" class="dropdown-item">Dex Tracker <span class="badge bg-success">New</span></a></li>
+<li><a href="#" class="dropdown-item">Domain Name Lookup <span class="badge bg-success">New</span></a></li>
+<!--col one div end-->
+</div>  
+        
+<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+<h5 class="dropdown-header"><b>Tools</b></h5>
+<li><a href="#" class="dropdown-item">Label Word Cloud</a></li>
+<li><a href="#" class="dropdown-item">Verified Signature</a></li>
+<li><a href="#" class="dropdown-item">Token Approvals <span class="badge bg-secondary">Beta</span></a></li>
+<li><a href="#" class="dropdown-item">Unit Converter</a></li>
+<li><hr class="dropdown-divider"></li>
+<li><a href="../BscScan Html's/bscscanchartsandstats.html" class="dropdown-item">Chart & Stats</a></li>
+<li><a href="../BscScan Html's/bscscanTopStatistics.html" class="dropdown-item">Top Statistics</a></li>
+<li><a href="../BscScan Html's/bscscanDeveloperApis.html" class="dropdown-item">Developer Api</a></li>
+<!--col one div end-->
+</div>  
+        
+<!--row div end mega menu-->
+</div>
+<!--container div end-->
+</div>
+<!--more main ul end-->
+</ul>
+<!--More li end-->
+</li>
+        
+<li class="nav-item"><a href="#" class="nav-link"><span class="user-logo"><i class="fa fa-circle-user"></i></span> Sign in</a></li>
+<li class="nav-item dropdown"><a href="#" class="nav-link"><img src="../bscscanAllimages/bnb.svg" alt="" style="width: 25px;"></a>
+<ul class="dropdown-menu">
+<li><a href="#" class="dropdown-item">Bsc Mainnet</a></li>
+<li><a href="#" class="dropdown-item">Bsc Testnet</a></li>
+<!--ul dropdown end-->
+</ul>
+<!--explorer li end-->
+</li>   
+ <!--main ul end-->
+</ul>   
+</div>
+<!--collapse div end-->
+
+<!--container fluid div end in navbar-->
+</div>
+<!--navbar end-->
+</nav>
+<!--top form input div-->
+<!--header section end-->
+</section>
+
+
+
+<section class="top-input-section" style="width: 100%; height: 65px;">
+<div class="container-fluid mt-2">
+<div class="row">
+
+<div class="col-lg-4 col-md-4 col-sm-12 col-12" style="display: none;">
+<div class="bnb-price">
+<span class="text-dark" style="font-size: small;">BNB: $319.07
+<span class="text-danger" style="font-size: small;">(-1.29%)</span>
+</span>
+<span class="space ms-2 me-2">|
+<a href="#" class="text-decoration-none text-dark" style="font-size: small;"><i class="fa fa-gas-pump"></i>
+<span class="price">3 Gwei</span>
+</a>
+</span>
+    <!--bnb price div end-->
+</div>
+    <!--left side col div end-->
+</div>
+    
+    
+<div class="col-lg-8 col-md-8 col-sm-12 col-12" style="width: 100%;">
+<div class="input-group">
+<span class="input-group-text">
+<select name="" id="" class="form-select">
+<option value="all-filters">All Filters</option>
+<option value="address">Address</option>
+<option value="tokens">Tokens</option>
+<option value="name-tags">Name Tags</option>
+<option value="labels">Labels</option>
+<option value="websites">Websites</option>
+</select>
+</span>
+<input type="text" class="form-control" placeholder="Search By Address/ Txn Hash/">
+<div class="input-group-text" style="background: #3498db;">
+<span class="input-group-text" style="background-color: #3498db;"><i class="fa fa-search  text-white style="display: block; width: 100%;"></i></span>
+    <!--input group text div end-->
+</div>
+</div>
+<!--input group div end-->
+</div>
+        
+<!--row div end-->
+</div>
+</div>
+</section>
+<!--top input section end-->
+
+
+<section class="pending m-3 bg-light">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-4 col-4">
+<div class="blocks p-2 m-auto"><h4>Blocks</h4></div>
+
+    <!--col lg-6 left side div end-->
+</div>
+
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-6" style="display: flex; justify-content: end; margin: auto;">
+<div class="fees-burnt">
+<span class="fees-brunt">
+<i class="fa fa-fire text-warning"></i>
+Fees Burnt 
+171,492.52 BNB
+</span>
+    <!--feees burnt div end-->
+</div>
+    <!--col lg 6 right side div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--blocks body section end-->
+</section>
+
+<section class="pending-transaction-pools m-3">
+<div class="row">
+<div class="col-12 m-auto">
+<div class="pending">
+<a href="#" class="text-decoration-none ms-2 pe-2  text-dark">
+Block #28191012 to #28191036 (Total of 28,191,037 blocks)
+</a>
+    <!--pending div end-->
+</div>
+    <!--left side col div end-->
+</div>
+    <!--row end-->
+</div>
+    <!--pending transaction pools section end-->
+</section>
+
+
+
+<section class="pagination-section m-3">
+<div class="row">
+
+<div class="col-12">
+<ul class="pagination" style="display: flex; justify-content: start; margin: auto;" id="pagination-ul">
+<li class="page-item"><a href="#" class="page-link">First</a></li>
+<li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-left"></i></a></li>
+<li class="page-item disabled"><a href="#" class="page-link"><span>page
+<b>1 of</b>
+<b>5</b>
+</span>
+</a>
+</li>
+<li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-right"></i></a></li>
+<li class="page-item"><a href="#" class="page-link">Last</a></li>
+</ul>
+
+    <!--right side col div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--pagination section end-->
+</section>
+
+
+
+<section class="table-section m-3">
+<div class="table-responsive">
+<table class="table table-hover">
+<thead>
+<tr>
+<th class="block">Block</th>    
+<th class="age">Age</th>
+<th class="txn">Tnx</th>
+<th class="validator">Validators</th>
+<th class="gas-used">Gas Used</th>
+<th class="gas-limit">Gas Limit</th>
+<th class="rewards">Reward</th>
+<th class="fees-burnt">Fees Burnt</th>
+</tr>    
+</thead>
+
+<tbody>
+<tr>    
+<td class="block"><a href="#">28191036</a></td>
+<td class="age"><span class="age">11 secs ago</span></td>
+<td class="tnx"><a href="#">135</a></td>
+<td class="validators"><a href="#">Validator: BscScan</a></td>
+<td class="gas-used">13,362,099 <span class="small">(9.54%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 30%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04989 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00498 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191035</a></td>
+<td class="age"><span class="age">14 secs ago</span></td>
+<td class="tnx"><a href="#">148</a></td>
+<td class="validators"><a href="#">0x61dd481a114a2e</a></td>
+<td class="gas-used">13,338,806 <span class="small">(9.53%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 29%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 05643 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00564 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191034</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">151</a></td>
+<td class="validators"><a href="#">Validator: Legend II</a></td>
+<td class="gas-used">13,772,233 <span class="small">(9.84%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 24%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04668 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00466 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191033</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">101</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">7,869,002 <span class="small">(5.62%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 19%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04292 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00429 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191032</a></td>
+<td class="age"><span class="age">23 secs ago</span></td>
+<td class="tnx"><a href="#">181</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">34,418,455 <span class="small">(24.58%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 15%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 07007 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00656 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191036</a></td>
+<td class="age"><span class="age">11 secs ago</span></td>
+<td class="tnx"><a href="#">135</a></td>
+<td class="validators"><a href="#">Validator: BscScan</a></td>
+<td class="gas-used">13,362,099 <span class="small">(9.54%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 30%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04989 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00498 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191035</a></td>
+<td class="age"><span class="age">14 secs ago</span></td>
+<td class="tnx"><a href="#">148</a></td>
+<td class="validators"><a href="#">0x61dd481a114a2e</a></td>
+<td class="gas-used">13,338,806 <span class="small">(9.53%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 29%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 05643 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00564 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191034</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">151</a></td>
+<td class="validators"><a href="#">Validator: Legend II</a></td>
+<td class="gas-used">13,772,233 <span class="small">(9.84%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 24%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04668 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00466 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191033</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">101</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">7,869,002 <span class="small">(5.62%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 19%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04292 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00429 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191032</a></td>
+<td class="age"><span class="age">23 secs ago</span></td>
+<td class="tnx"><a href="#">181</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">34,418,455 <span class="small">(24.58%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 15%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 07007 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00656 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191036</a></td>
+<td class="age"><span class="age">11 secs ago</span></td>
+<td class="tnx"><a href="#">135</a></td>
+<td class="validators"><a href="#">Validator: BscScan</a></td>
+<td class="gas-used">13,362,099 <span class="small">(9.54%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 30%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04989 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00498 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191035</a></td>
+<td class="age"><span class="age">14 secs ago</span></td>
+<td class="tnx"><a href="#">148</a></td>
+<td class="validators"><a href="#">0x61dd481a114a2e</a></td>
+<td class="gas-used">13,338,806 <span class="small">(9.53%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 29%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 05643 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00564 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191034</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">151</a></td>
+<td class="validators"><a href="#">Validator: Legend II</a></td>
+<td class="gas-used">13,772,233 <span class="small">(9.84%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 24%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04668 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00466 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191033</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">101</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">7,869,002 <span class="small">(5.62%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 19%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04292 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00429 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191032</a></td>
+<td class="age"><span class="age">23 secs ago</span></td>
+<td class="tnx"><a href="#">181</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">34,418,455 <span class="small">(24.58%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 15%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 07007 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00656 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191036</a></td>
+<td class="age"><span class="age">11 secs ago</span></td>
+<td class="tnx"><a href="#">135</a></td>
+<td class="validators"><a href="#">Validator: BscScan</a></td>
+<td class="gas-used">13,362,099 <span class="small">(9.54%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 30%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04989 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00498 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191035</a></td>
+<td class="age"><span class="age">14 secs ago</span></td>
+<td class="tnx"><a href="#">148</a></td>
+<td class="validators"><a href="#">0x61dd481a114a2e</a></td>
+<td class="gas-used">13,338,806 <span class="small">(9.53%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 29%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 05643 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00564 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191034</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">151</a></td>
+<td class="validators"><a href="#">Validator: Legend II</a></td>
+<td class="gas-used">13,772,233 <span class="small">(9.84%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 24%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04668 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00466 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191033</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">101</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">7,869,002 <span class="small">(5.62%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 19%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04292 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00429 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191032</a></td>
+<td class="age"><span class="age">23 secs ago</span></td>
+<td class="tnx"><a href="#">181</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">34,418,455 <span class="small">(24.58%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 15%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 07007 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00656 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191036</a></td>
+<td class="age"><span class="age">11 secs ago</span></td>
+<td class="tnx"><a href="#">135</a></td>
+<td class="validators"><a href="#">Validator: BscScan</a></td>
+<td class="gas-used">13,362,099 <span class="small">(9.54%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 30%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04989 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00498 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191035</a></td>
+<td class="age"><span class="age">14 secs ago</span></td>
+<td class="tnx"><a href="#">148</a></td>
+<td class="validators"><a href="#">0x61dd481a114a2e</a></td>
+<td class="gas-used">13,338,806 <span class="small">(9.53%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 29%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 05643 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00564 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191034</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">151</a></td>
+<td class="validators"><a href="#">Validator: Legend II</a></td>
+<td class="gas-used">13,772,233 <span class="small">(9.84%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 24%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04668 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00466 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191033</a></td>
+<td class="age"><span class="age">17 secs ago</span></td>
+<td class="tnx"><a href="#">101</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">7,869,002 <span class="small">(5.62%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 19%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 04292 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00429 BNB</td>
+</tr>
+
+<tr>    
+<td class="block"><a href="#">28191032</a></td>
+<td class="age"><span class="age">23 secs ago</span></td>
+<td class="tnx"><a href="#">181</a></td>
+<td class="validators"><a href="#">Validator: NodeReal</a></td>
+<td class="gas-used">34,418,455 <span class="small">(24.58%)</span>
+<div class="progress mt-2" style="height: 5px;">
+<div class="progress-bar" style="width: 15%;">
+</div>    
+</div>
+</td>
+<td class="gas-limit">140,000,000</td>
+<td class="rewards">0 <b>.</b> 07007 BNB</td>
+<td class="fees-burnt">0 <b>.</b> 00656 BNB</td>
+</tr>
+
+</tbody>
+</table>
+    <!--table responsive div end-->
+</div>
+    <!--table section end-->
+</section>
+
+
+<section class="show m-3 p-2">
+<div class="row" style="display: flex; justify-content: center; align-items: center;">
+<div class="col-lg-7 col-md-7 col-sm-12 col-12">
+<span>Show</span>
+<select name="" id="sel" style="border: 1px solid #3498db; padding: 5px; border-radius: 6px;">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+<span class="text-secondary">Records</span>
+    <!--col left side div end-->
+</div>
+
+<div class="col-lg-5 col-md-5 col-sm-12 col-12 pt-3">
+<ul class="pagination pagination-sm" style="display: flex; justify-content: center; align-items: center;">
+<li class="page-item"><a href="#" class="page-link">First</a></li>  
+<li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-left text-secondary"></i></a></li>    
+<li class="page-item disabled"><a href="#" class="page-link"><span>Page
+<span class="of">1 of 1127642</span>
+</span>
+</a>
+</li>  
+<li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-right"></i></a></li>
+<li class="page-item"><a href="#" class="page-link text-secondary">Last</a></li>    
+</ul>
+
+
+    <!--col right side div end-->
+</div>
+    <!--row div end-->
+</div>
+<!--show section end-->    
+</section>
+
+
+
+
+<section class="footer-section mt-3" style="box-shadow: 2px 2px 2px lightgray;">
+<div class="cont ms-4" style="border: 1px sold green;">
+<div class="row">
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="powered-by mt-3">
+<img src="../bscscanAllimages/bnb.svg" alt="" width="25px">
+<span class="text h5 text-white ms-3 mt-2" style="font-size: small;">Powered by BNB Beacon Chain</span>
+
+    <!--powered by div end-->
+</div>
+<p class="text-white mt-3" style="font-weight: lighter; font-size: small;">BscScan is a Block Explorer andAnalytics Platform for BNB Smart Chain</p>
+
+<div class="add-network-div mt-4 mb-3">
+<button type="button" class="btn btn-boxed text-white btn-sm mt-3" style="background: rgba(248,249,250,.1);"><span class="img"><img src="../bscscanAllimages/metamask.svg" alt="" style="width: 25px;"></span> Add BBC Network</button>
+    
+<a href="#" class="btn ms-3 text-white mt-3" style="background: rgba(248,249,250,.1);"><i class="fa fa-cogs text-white"></i>Preferences
+</a>
+    
+<button id="dark-mode" class="btn btn-boxed mt-3" style="cursor: pointer;"><i class="fa fa-moon text-white" style="background: transparent;"></i></button>
+    
+    
+<!--add network div end-->
+</div>
+
+
+
+
+
+    <!--col first div end-->
+</div>
+
+
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="company-div mt-4">
+<h5 class="company text-white" style="font-size: small; font-weight: bold;">Company
+<hr>
+</h5>
+<ul class="navbar-nav">
+<li class="nav-item"><a href="#" class="nav-link">Advertise
+<sup><span class="badge bg-success">New</span></sup>
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Delegate to BscScan
+<sup><span class="badge bg-primary">Staking</span></sup>
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Contact Us
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Brand Assets
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Terms of Service
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Bug Bounty
+</a>
+</li>
+<!--main ul end-->
+</ul>
+
+
+<!--company div end-->
+</div>
+    <!--col two div end-->
+</div>
+
+
+
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="community-div mt-4">
+<h5 class="community text-white" style="font-size: small; font-weight: bold;">Community
+<hr>
+</h5>
+<ul class="navbar-nav">
+<li class="nav-item"><a href="../BscScan Html's/bscscanDocumentationApis.html" class="nav-link">API Documentation
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Knowledge Base
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Network Status
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Learn BSC
+</a>
+</li>
+ <!--main ul end-->
+</ul>
+
+    <!--community div end-->
+</div>
+    <!--col three div end-->
+</div>
+
+
+
+
+<div class="col-lg-3 col-md-4 col-sm-12 col-12">
+<div class="products-div mt-4">
+<h5 class="community text-white" style="font-size: small; font-weight: bold;">Products
+<hr>
+</h5>
+<ul class="navbar-nav">
+<li class="nav-item"><a href="../BscScan Html's/bscscanDeveloperApis.html" class="nav-link">Developer APIs
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Explorer-as-a-Service (EaaS)
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Etherscan
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Blockscan
+</a>
+</li>
+<li class="nav-item"><a href="#" class="nav-link">Polygonscan
+</a>
+</li>
+<!--main ul end-->
+</ul>
+
+    <!--products div end-->
+</div>    
+
+    <!--col four div end-->
+</div>
+
+    <!--row div end-->
+</div>
+
+<hr style="opacity: 0.2; color: #fff;" class="m-3">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-12 col-12">
+<p class="text-white" style="font-weight: lighter; font-size: small;">BscScan © 2023 (BSC-C) <spanclass="ms-2">| </span> 
+? Built by the same team behind 
+<a href="#" class="text-decoration-none">Etherscan</a>
+<span>|</span>
+<a href="#" class="text-decoration-none text-secondary">Donate</a>
+<i class="fa fa-heart text-danger"></i>
+</p>
+
+    <!--col first div end left side-->
+</div>
+
+
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 text-end">
+<ul class="navbar-nav" style="display: -webkit-inline-box;">
+<li class="nav-item mr-3"><a href="#" class="nav-link btn">
+<i class="fa fa-message text-white"></i>
+</a>
+</li>
+<li class="nav-item ms-3 me-3"><a href="#" class="nav-link btn ">
+<i class="fa-brands fa-square-twitter text-white"></i>
+</a>
+</li>
+<li class="nav-item me-3"><a href="#" class="nav-link bt">
+    <i class="fa-solid fa-circle fa-m text-white"></i>
+</a>
+</li>
+
+    <!--ul end last right side-->
+</ul>
+    <!--col lg 4 right side end-->
+</div>
+
+
+    <!--row div end-->
+</div>
+
+
+
+<!--container div end-->    
+</div>
+
+    <!--footer section end-->
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

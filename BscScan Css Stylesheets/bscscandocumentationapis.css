@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header-section .header .navbar select option{
+    color: orange;
+}
+.header-section .header .navbar .navbar-nav li a{
+    color: rgba(240,185,11,1.00);
+    font-weight: bolder;
+}
+.header-section .header .navbar .navbar-nav li a:hover{
+    color: black;
+    transition: all 0.4s;
+}
+.main-body .left-menu .navbar .navbar-nav  li a:hover{
+    background: #dddddd;
+    border-radius: 6px;
+    transition: ease-in 0.4s;
+    
+}
+.main-body .left-menu .navbar ul li a.active{
+    font-weight: bold;
+    color: rgba(240,185,11,1.00);
+}
+.main-body .left-menu .navbar ul li a{
+    color: grey;
+}
+#mycard a:hover{
+    color:  rgba(240,185,11,1.00);
+    transition: all 0.5s;
+    margin-bottom: 5px;
+}
+#sidebtn{
+    display: none;
+}
+@media screen and (max-width: 767px) {
+.header-section .header .navbar select{
+    display: none;
+}    
+.navbar .navbar-collapse{
+    display: none;
+}
+.main-body #sidebar{
+    display: none;
+}
+.header-section .header .navbar .navbar-toggler{
+    display: none;
+}
+#sidebtn{
+    display: block;
+}
+.offcanvas .offcanvas-body .navbar .navbar-nav li a:hover{
+    background: #dddddd;
+    padding-left: 3px;
+    transition: ease-out 0.4s;
+}
+}
